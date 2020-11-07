@@ -7,10 +7,10 @@ import History from "./History/History.js";
 function App() {
   return (
     <div className="App">
-    {/*
-      <History />
+      {/*
+      <Objective />
     */}
-    <Objective />
+      <History />
     </div>
   );
 }
