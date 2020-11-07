@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/History/static/css/main.ef8d6706.chunk.css",
-    "main.js": "/History/static/js/main.472a7dec.chunk.js",
-    "main.js.map": "/History/static/js/main.472a7dec.chunk.js.map",
-    "runtime-main.js": "/History/static/js/runtime-main.56e00664.js",
-    "runtime-main.js.map": "/History/static/js/runtime-main.56e00664.js.map",
-    "static/js/2.ade06c19.chunk.js": "/History/static/js/2.ade06c19.chunk.js",
-    "static/js/2.ade06c19.chunk.js.map": "/History/static/js/2.ade06c19.chunk.js.map",
-    "index.html": "/History/index.html",
-    "precache-manifest.4b69ea640edba1b04a09893423860dc1.js": "/History/precache-manifest.4b69ea640edba1b04a09893423860dc1.js",
-    "service-worker.js": "/History/service-worker.js",
-    "static/css/main.ef8d6706.chunk.css.map": "/History/static/css/main.ef8d6706.chunk.css.map",
-    "static/js/2.ade06c19.chunk.js.LICENSE.txt": "/History/static/js/2.ade06c19.chunk.js.LICENSE.txt",
-    "static/media/Register.svg": "/History/static/media/Register.76b4cafe.svg"
+    "main.css": "/HistoryObjectives/static/css/main.ef8d6706.chunk.css",
+    "main.js": "/HistoryObjectives/static/js/main.714dc5fc.chunk.js",
+    "main.js.map": "/HistoryObjectives/static/js/main.714dc5fc.chunk.js.map",
+    "runtime-main.js": "/HistoryObjectives/static/js/runtime-main.8b0c53fc.js",
+    "runtime-main.js.map": "/HistoryObjectives/static/js/runtime-main.8b0c53fc.js.map",
+    "static/js/2.ade06c19.chunk.js": "/HistoryObjectives/static/js/2.ade06c19.chunk.js",
+    "static/js/2.ade06c19.chunk.js.map": "/HistoryObjectives/static/js/2.ade06c19.chunk.js.map",
+    "index.html": "/HistoryObjectives/index.html",
+    "precache-manifest.19991cf2a99346b1987c34afad97e9af.js": "/HistoryObjectives/precache-manifest.19991cf2a99346b1987c34afad97e9af.js",
+    "service-worker.js": "/HistoryObjectives/service-worker.js",
+    "static/css/main.ef8d6706.chunk.css.map": "/HistoryObjectives/static/css/main.ef8d6706.chunk.css.map",
+    "static/js/2.ade06c19.chunk.js.LICENSE.txt": "/HistoryObjectives/static/js/2.ade06c19.chunk.js.LICENSE.txt",
+    "static/media/Register.svg": "/HistoryObjectives/static/media/Register.76b4cafe.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.56e00664.js",
+    "static/js/runtime-main.8b0c53fc.js",
     "static/js/2.ade06c19.chunk.js",
     "static/css/main.ef8d6706.chunk.css",
-    "static/js/main.472a7dec.chunk.js"
+    "static/js/main.714dc5fc.chunk.js"
   ]
 }
