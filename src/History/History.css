@@ -9,59 +9,205 @@ body {
   background-color: #000;
   font-family: "Poppins", sans-serif;
 }
-.row {
-  margin-left: 15%;
-  margin-right: 15%;
-  float: right;
-}
 
 .text {
   color: white;
   text-align: right;
   bottom: 0;
 }
-.textFont {
-  font-size: 16px;
-}
 
+.History__link {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: right;
+  color: #d2d2d2;
+}
+.History__link:hover {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: right;
+  color: #d2d2d2;
+}
 .MobileView {
   display: none;
   bottom: 20px;
   left: 40%;
   position: fixed;
 }
-
-/* MOBILE SPECIFIC */
-
-@media only screen and (max-width: 420px) {
-  .MobileView {
-    display: flex;
+.History__lightColor {
+  color: #ffeadc;
+}
+.History__text1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 63px;
+  text-align: right;
+}
+/*desktop*/
+@media screen and (min-width: 1200px) {
+  .History__75 {
+    /* line-height: 0; */
+    font-size: 55px;
   }
-  .row {
-    margin-left: 3%;
-    margin-right: 3%;
+  .History__text2 {
+    font-size: 30px;
+    line-height: 56px;
   }
-  .textFont {
-    font-size: 12px;
+  .History__linkImg {
+    width: 62px;
+    height: 30px;
+  }
+  .History__textFont {
+    font-size: 17px;
+  }
+
+  .History__registerLink {
+    float: right;
+    margin-right: 30%;
+  }
+  .History__row {
+    margin-left: 28%;
+    margin-right: 28%;
+    float: right;
+  }
+  .History__17 {
+    font-size: 35px;
+  }
+  .History__text4 {
+    font-size: 25px;
+    line-height: 1.5;
   }
 }
 
-.registerLink {
-  float: right;
+/*bigger tablets*/
+@media (min-width: 800px) and (max-width: 1200px) {
+  .History__75 {
+    /* line-height: 0; */
+    font-size: 55px;
+  }
+  .History__text2 {
+    font-size: 30px;
+    line-height: 56px;
+  }
+  .History__linkImg {
+    width: 62px;
+    height: 46px;
+  }
+  .History__textFont {
+    font-size: 17px;
+  }
+
+  .History__registerLink {
+    float: right;
+    margin-right: 30%;
+  }
+  .History__row {
+    margin-left: 18%;
+    margin-right: 18%;
+    float: right;
+  }
+  .History__17 {
+    font-size: 35px;
+  }
+  .History__text4 {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+}
+/*tablet*/
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  .History__75 {
+    /* line-height: 0; */
+    font-size: 55px;
+  }
+  .History__text2 {
+    font-size: 30px;
+    line-height: 56px;
+  }
+  .History__linkImg {
+    width: 62px;
+    height: 46px;
+  }
+  .History__textFont {
+    font-size: 17px;
+  }
+
+  .History__registerLink {
+    float: right;
+    margin-right: 30%;
+  }
+  .History__row {
+    margin-left: 20%;
+    margin-right: 20%;
+    float: right;
+  }
+  .History__17 {
+    font-size: 35px;
+  }
+  .History__text4 {
+    font-size: 25px;
+    line-height: 1.5;
+  }
+}
+/* MOBILE SPECIFIC */
+
+@media only screen and (max-width: 480px) {
+  .MobileView {
+    display: flex;
+  }
+  .History__text4 {
+    font-size: 18px;
+  }
+  .History__17 {
+    font-size: 25px;
+  }
+  .History__row {
+    margin-left: 8px;
+    margin-right: 13px;
+  }
+  .History__textFont {
+    font-size: 14px;
+  }
+  .History__registerLink {
+    float: right;
+    margin-right: 15%;
+  }
+  .History__75 {
+    font-size: 25px;
+  }
+  .History__linkImg {
+    width: 25.95px;
+    height: 36px;
+  }
+  .History__text2 {
+    font-size: 19px;
+  }
+  .History__text3 {
+    font-size: 12px;
+    line-height: 19px;
+    color: #ffeadc;
+  }
 }
 
 /* ANIMATIONS */
 
 .animation {
   transform: translateY(-500%);
-  transition: 2s all ease-out;
+  transition: 1s all ease-out;
 }
 .animationFade {
   transform: translateY(220%);
   transition: 1s all ease-out;
   /* overflow: hidden; */
   animation-name: animationFade;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 @keyframes animationFade {
   from {
@@ -75,7 +221,7 @@ body {
 .animationTop {
   /* opacity: 0; */
   animation-name: animationTop;
-  animation-duration: 2s;
+  animation-duration: 1s;
   /* animation-timing-function: ease-in-out;
     animation-iteration-count: 5; */
 }
@@ -105,7 +251,7 @@ hr {
 }
 .lineAnimation {
   animation-name: lineAnim;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 @keyframes lineAnim {
   from {
@@ -118,9 +264,9 @@ hr {
 .animatebottom {
   position: relative;
   -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 1s;
   animation-name: animatebottom;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
 }
 @-webkit-keyframes animatebottom {
   from {
