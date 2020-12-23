@@ -7,349 +7,397 @@ import { makeStyles } from "@material-ui/core/styles";
 import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Register from "./Register.svg";
-
-const useStyles = makeStyles((theme) => ({
-  fab: {
-    position: "absolute",
-    bottom: theme.spacing(2),
-    right: theme.spacing(2),
-    backgroundColor: "transparent",
-  },
-}));
-
-// const classes = useStyles();
+import mobileData from "./Data.js";
 
 class History extends React.Component {
   constructor() {
     super();
     this.state = {
+      mobileText: mobileData,
       text: [
-        <p className="History__lightColor History__text1">
-          National <br /> Integrated Medical
-          <p style={{ color: "#e0a984" }}>Association</p>
-        </p>,
-        <p className="History__textFont" style={{ color: "#FFEADC" }}>
-          The National Integrated Medical Association (NIMA) is an{" "}
-          <span style={{ color: "#FF812D" }}>
-            {" "}
-            Indian Non-governmental organization established in 1948.
-          </span>{" "}
-          Integrated medical education was started nearly
-          <br />
-          <span className="History__75" style={{ color: "#FF812D" }}>
-            {" "}
-            75 <span style={{ fontSize: "16px" }}> years ago </span>{" "}
-          </span>
-          , and though the graduates coming out of these courses proved very
-          successful practitioners ideal for the conditions of this country.
-        </p>,
-        <p className="History__textFont" style={{ color: "#FFEADC" }}>
-          The vested interests from both
-          <span style={{ color: "#FF812D" }}>
-            {" "}
-            modern medical & pure Ayurved camps,
-          </span>{" "}
+        <pre>
           <span
-            className="History__text2"
-            style={{ color: "#F9A162", fontWeight: "500" }}
+            style={{
+              backgroundColor: "#DB5800",
+              color: "#FFFFFF",
+              paddingLeft: "21px",
+              paddingRight: "21px",
+              paddingTop: "2px",
+              paddingBottom: "2px",
+            }}
           >
-            misguided the authorities{" "}
+            HISTORY
+          </span>
+          <p className="History__lightColor History__text1">
+            National{"\n"}Integrated{"\n"}
+            Medical{"\n"}
+            <span style={{ color: "#e0a984" }}>Association</span>
+          </p>
+        </pre>,
+        <pre className="History__lightColor" style={{ fontSize: "22px" }}>
+          The National Integrated Medical Association (NIMA){"\n"}is an
+          <span style={{ color: "#F9B384" }}>
+            {" "}
+            Indian Non-governmental organization{"\n"}established in{" "}
+            <span style={{ color: "#FF812D" }}>1948.</span>
+          </span>{" "}
+          Integrated{"\n"}medical education was started nearly{"\n"}
+          {"\n"}
+          <span className="History__75" style={{ color: "#FF812D" }}>
+            75
+            <span style={{ fontSize: "24px", color: "#F9B384" }}>
+              {" "}
+              years ago{" "}
+            </span>
+          </span>
+          , and though the graduates{"\n"}
+          <span style={{ lineHeight: "0" }}>
+            coming out of these courses proved very successful{"\n"}
+          </span>
+          practitioners ideal for the conditions of this country.
+        </pre>,
+        <pre style={{ fontSize: "22px", color: "#FFEADC" }}>
+          The vested interests from both{" "}
+          <span style={{ color: "#FF812D", fontSize: "20px" }}>
+            modern medical & pure{"\n"}Ayurved camps,
+          </span>
+          <span
+            style={{ fontSize: "32px", color: "#F9A162", fontWeight: "500" }}
+          >
+            {" "}
+            misguided the{"\n"}authorities{" "}
             <span
               className=""
               style={{ color: "#F9A162", fontWeight: "normal" }}
             >
               and
             </span>{" "}
-            created various problems
+            created various{"\n"}problems
           </span>{" "}
-          <span className="History__textFont" style={{ color: "#FFEADC" }}>
-            for integrated practitioners from the very beginning. Gradually the
-            integrated medical community started organising itself to face the
-            problems in an organised manner
+          <span className="History__lightColor" style={{ color: "#FFEADC" }}>
+            for integrated practitioners from the very{"\n"}beginning. Gradually
+            the integrated medical community{"\n"} started organising itself to
+            face the problems in an organised{"\n"}manner
           </span>
-        </p>,
-        <p style={{ color: "#ffdfc9", fontSize: "42px" }}>
-          All <br /> India <p style={{ color: "#f9b384" }}>Conference</p>{" "}
-        </p>,
-        <p className="History__text3">
-          The first major attempt was of the establishment of National Medical
-          Association of India in{" "}
+        </pre>,
+        <pre className="History__lightColor" style={{ fontSize: "82px" }}>
+          All{"\n"}India<p style={{ color: "#f9b384" }}>Conference</p>
+        </pre>,
+        <pre
+          className="History__text3 History__lightColor"
+          style={{ fontSize: "18px" }}
+        >
+          The first major attempt was of the establishment of{"\n"} National
+          Medical Association of India in{" "}
           <span
-            className="History__75"
-            style={{ color: "#FF812D", lineHeight: "1.5" }}
+            style={{ color: "#FF812D", lineHeight: "1.5", fontSize: "40px" }}
           >
-            {" "}
             1947
           </span>{" "}
-          , which soon spread its activities in northern states of the country.
-          From
+          , which{"\n"}soon spread its activities in northern states of the
+          country.{"\n"}From
           <span
-            className="History__75"
-            style={{ color: "#FF812D", lineHeight: "1.5" }}
+            style={{ color: "#FF812D", lineHeight: "1.5", fontSize: "40px" }}
           >
             {" "}
             1953
           </span>{" "}
-          onwards other Associations of Integrated Practitioners were
-          established in the states of Bombay, Mysore and madras,etc. with the
-          names as{" "}
+          onwards other Associations of Integrated{"\n"}Practitioners were
+          established in the states of Bombay,{"\n"} Mysore and madras,etc. with
+          the names as{" "}
           <span style={{ color: "#F9A162" }}>
-            Bombay State Integrated Medical Association
+            Bombay{"\n"}State Integrated Medical Association
           </span>{" "}
           as{" "}
           <span style={{ color: "#FF812D" }}>
-            Maharashtra State Integrated Medical Association & Gujrat State
-            Integrated Medical Association, Integrated Associations of Mysore,
-            etc.
+            Maharashtra{"\n"}State Integrated Medical Association & Gujrat State
+            {"\n"} Integrated Medical Association, Integrated Associations of
+            {"\n"} Mysore, etc.
           </span>
-        </p>,
-        <p style={{ fontSize: "13px" }}>
-          The attempt to bring all these associations together, materialised in
+        </pre>,
+        <pre className="History__lightColor" style={{ fontSize: "18px" }}>
+          The attempt to bring all these associations together,{"\n"}
+          materialised in
           <span
-            className="History__75"
-            style={{ color: "#FF812D", lineHeight: "1.5" }}
+            style={{ fontSize: "40px", color: "#FF812D", lineHeight: "1.5" }}
           >
             {" "}
             1966{" "}
           </span>
-          at
-          <span style={{ color: "#F9A162", fontSize: "17px" }}>
-            {" "}
-            5th AIC{" "}
+          at <span style={{ color: "#F9A162", fontSize: "24px" }}>
+            5th AIC
           </span>{" "}
-          of NIMA Conference under the Presidentship of
-          <span style={{ color: "#FF812D", fontSize: "17px" }}>
+          of NIMA
+          {"\n"}Conference under the Presidentship of
+          <span style={{ color: "#FF812D", fontSize: "22px" }}>
             {" "}
-            Dr Panna Lal Varshney
-          </span>{" "}
+            Dr Panna{"\n"}Lal Varshney{" "}
+          </span>
           and at the{" "}
-          <span style={{ color: "#F9A162", fontSize: "17px" }}>7th</span> All
-          India Conference of NIMA held at Bhopal on
-          <span style={{ color: "#FF812D", fontSize: "17px" }}> 1.2.1969 </span>
-          the Constitution of the National Integrated Medical Association was
-          adopted and <br />
-          thus{" "}
-          <span style={{ color: "#FF812D", fontSize: "26px", lineHeight: "2" }}>
-            {" "}
+          <span style={{ color: "#F9A162", fontSize: "24px" }}>7th</span> All
+          India Conference{"\n"}of NIMA held at Bhopal on
+          <span style={{ color: "#FF812D", fontSize: "24px" }}> 1.2.1969 </span>
+          the Constitution{"\n"}of the National Integrated Medical Association
+          was{"\n"}adopted and thus{" "}
+          <span
+            style={{ color: "#FF812D", fontSize: "24px", lineHeight: "1.5" }}
+          >
             NIMA
           </span>{" "}
-          <span style={{ color: "#F9A162", fontSize: "17px" }}>was born.</span>
-        </p>,
-        <p>
-          <p style={{ color: "#ffdfc9", fontSize: "70px" }}> 1st</p>
-          <span style={{ color: "#e0a984", fontSize: "35px" }}>Meeting</span>
-        </p>,
-        <p className="textFont" style={{ color: "#ffdfc9" }}>
-          The first meeting of the NIMA Central Council was held at Delhi on
-          6.4.1969 which elected Dr P.N.Awasthi (Bombay) as the president and
-          Dr.K.S.Potdar (Delhi) as the General Secretary of NIMA.
-        </p>,
-        <p
+          <span style={{ color: "#F9A162", fontSize: "18px" }}>was born.</span>
+        </pre>,
+        <pre className="History__lightColor">
+          <span style={{ fontSize: "100px" }}> 1st</span>
+          {"\n"}
+          <span style={{ color: "#f9b384", fontSize: "70px" }}>Meeting</span>
+        </pre>,
+        <pre style={{ color: "#ffdfc9", fontSize: "20px" }}>
+          The first meeting of the NIMA Central Council{"\n"}was held at Delhi
+          on{" "}
+          <span style={{ color: "#FF812D", fontSize: "28px", lineHeight: "2" }}>
+            6.4.1969
+          </span>{" "}
+          which{"\n"}
+          elected{" "}
+          <span style={{ color: "#FF812D", fontSize: "26px", lineHeight: "2" }}>
+            Dr P.N.Awasthi
+          </span>{" "}
+          <span style={{ color: "#F9A162", fontSize: "18px" }}>(Bombay)</span>{" "}
+          as the{"\n"}
+          <span style={{ color: "#F9A162", fontSize: "24px" }}>
+            PRESIDENT
+          </span>{" "}
+          and{" "}
+          <span style={{ color: "#FF812D", fontSize: "26px", lineHeight: "2" }}>
+            Dr.K.S.Potdar{" "}
+          </span>
+          <span style={{ color: "#F9A162", fontSize: "18px" }}>(Delhi)</span> as
+          {"\n"}the{" "}
+          <span style={{ color: "#F9A162", fontSize: "24px" }}>
+            GENERAL SECRETARY
+          </span>{" "}
+          of NIMA.
+        </pre>,
+        <pre
           style={{
-            color: "darkorange",
-            fontSize: "44px",
+            color: "#FF812D",
+            fontSize: "75px",
             margin: "0px",
             padding: "0px",
           }}
         >
           Regi
-          <span style={{ color: "#e0a984", margin: "0px", padding: "0px" }}>
+          <span
+            className="History__lightColor"
+            style={{ margin: "0px", padding: "0px" }}
+          >
             stration
           </span>
-        </p>,
-        <p
+        </pre>,
+        <pre
+          className="History__lightColor"
           style={{
-            color: "#ffdfc9",
-            fontSize: "13px",
+            fontSize: "16px",
           }}
           // className="textFont"
         >
-          Today NIMA is the only all India organisation of the
-          <span style={{ color: "#F9A162" }} className="History__text4">
+          Today NIMA is the only all India organisation of the{"\n"}
+          <span style={{ color: "#F9A162", fontSize: "28px" }}>
             {" "}
-            institutionally trained and qualified practitioners{" "}
+            institutionally trained and{"\n"}qualified practitioners{" "}
           </span>
-          of Indian Systems of Medicine, who have undergone the conjoint study
-          of Ayurveda, Unani, Siddha & modern medicine, for a period of at least
-          four years after Inter Science or XIIth std (10 + 2 years education).
-          The Association has well organised branches in{" "}
+          of Indian{"\n"}Systems of Medicine, who have undergone the{"\n"}
+          conjoint study of Ayurveda, Unani, Siddha & modern{"\n"}medicine, for
+          a period of at least four years after Inter{"\n"} Science or XIIth std
+          (10 + 2 years education). The{"\n"}
+          {"\n"}Association has well organised branches in{" "}
+          <span style={{ color: "#E77428", fontSize: "45px" }}>17</span>
+          {"\n"}
           <span style={{ color: "#F9A162", fontSize: "18px" }}>
-            {" "}
-            <span style={{ color: "#E77428" }} className="History__17">
-              17
-            </span>{" "}
-            states and in union territories{" "}
-          </span>
-          of Delhi & Chandigarh.
+            states and in union
+          </span>{" "}
+          territories of Delhi{"\n"} & Chandigarh.
+        </pre>,
+        <p style={{ fontSize: "90px" }} className="History__lightColor">
+          <span style={{ color: "#FF812D" }}>Branch</span>es
         </p>,
-        <p style={{ fontSize: "44px" }}>
-          <span style={{ color: "orange" }}>Branch</span>es
-        </p>,
-        <p
+        <pre
+          className="History__lightColor"
           style={{
-            color: "#ffdfc9",
+            fontSize: "16px",
           }}
-          className="History__textFont"
+          // className="textFont"
         >
-          Today NIMA is the only all India organisation of the institutionally
-          trained and qualified practitioners of Indian Systems of Medicine, who
-          have undergone the conjoint study of Ayurveda, Unani, Siddha & modern
-          medicine, for a period of at least four years after Inter Science or
-          XIIth std (10 + 2 years education). The Association has well organised
-          branches in 17 states and in union territories of Delhi & Chandigarh.
-        </p>,
-        <p>
+          Today NIMA is the only all India organisation of the{"\n"}
+          <span style={{ color: "#F9A162", fontSize: "28px" }}>
+            {" "}
+            institutionally trained and{"\n"}qualified practitioners{" "}
+          </span>
+          of Indian{"\n"}Systems of Medicine, who have undergone the{"\n"}
+          conjoint study of Ayurveda, Unani, Siddha & modern{"\n"}medicine, for
+          a period of at least four years after Inter{"\n"} Science or XIIth std
+          (10 + 2 years education). The{"\n"}
+          {"\n"}Association has well organised branches in{" "}
+          <span style={{ color: "#E77428", fontSize: "45px" }}>17</span>
+          {"\n"}
+          <span style={{ color: "#F9A162", fontSize: "18px" }}>
+            states and in union
+          </span>{" "}
+          territories of Delhi{"\n"} & Chandigarh.
+        </pre>,
+        <pre>
           <span
-            style={{ color: "#ffdfc9", fontSize: "100px", lineHeight: "1.2" }}
+            style={{ color: "#ffeadc", fontSize: "150px", lineHeight: "1" }}
           >
             lll
           </span>
-          <br />
-          <span
-            style={{ color: "#ffdfc9", fontSize: "30px", lineHeight: "1.2" }}
-          >
-            Tier
-          </span>{" "}
-          <br />
-          <span
-            style={{ color: "#ffb482", fontSize: "30px", lineHeight: "1.2" }}
-          >
-            System of{" "}
-          </span>{" "}
-          <span style={{ color: "#ff812d", fontSize: "30px" }}>NIMA </span>
-        </p>,
-        <p style={{ color: "#ffdfc9", fontSize: "12px" }}>
-          <p style={{ fontWeight: "bold", color: "#FF812D", fontSize: "17px" }}>
-            The Association has a three tier system in its working
+          {"\n"}
+          <span style={{ color: "#ffeadc", fontSize: "80px" }}>Tier</span>
+          {"\n"}
+          <span style={{ color: "#f9b384", fontSize: "55px" }}>System of </span>
+          <span style={{ color: "#ff812d", fontSize: "55px" }}>NIMA</span>
+        </pre>,
+        <pre>
+          <p style={{ color: "#FF812D", fontSize: "30px" }}>
+            <b>The Association has a three{"\n"}tier system in its working</b>
           </p>
-          Local/District Branch.
-          <br />
-          <br />
-          State Branches/Territorial Branches.
-          <br />
-          <br />
-          Central Council.
-        </p>,
-        <p className="History__textFont">
-          Minimum{" "}
-          <span
-            style={{ color: "#E77428", fontWeight: "bold" }}
-            className="History__17"
-          >
-            11
-          </span>{" "}
+          <span className="History__lightColor" style={{ fontSize: "18px" }}>
+            Local/District Branch.{"\n"}
+            {"\n"}
+            State Branches/Territorial Branches.{"\n"}
+            {"\n"}
+            Central Council.
+          </span>
+        </pre>,
+        <pre className="History__lightColor" style={{ fontSize: "20px" }}>
+          Minimum <span style={{ color: "#ff812d", fontSize: "26px" }}>11</span>{" "}
           eligible integrated practitioners from{" "}
-          <span style={{ color: "#E77428" }} className="History__17">
-            any town/city/area
+          <span style={{ color: "#F9A162", fontSize: "24px" }}>
+            any{"\n"}town/city/areas
           </span>{" "}
-          can come together and function locally as per the
-          <span style={{ color: "#E77428", fontWeight: "bold" }}>
+          can come together and function{"\n"}locally as per the
+          <span style={{ color: "#F9A162", fontWeight: "bold" }}>
             {" "}
-            Constitution of NIMA.
+            <b>Constitution of NIMA.</b>
           </span>
-          <br />
-          <br />
-          All{" "}
-          <span style={{ color: "#E77428", fontSize: "19px" }}>
-            Local/District
-          </span>{" "}
-          Branches in a state form a State Branch of NIMA, which is governed by
-          its{" "}
-          <span style={{ color: "#E77428", fontSize: "19px" }}>
-            state council.
+          {"\n"}
+          {"\n"}
+          <span style={{ lineHeight: "2" }}>
+            All Local/District Branches in a state form a State Branch{"\n"}of
+            NIMA, which is governed by its{" "}
+            <span style={{ color: "#E77428", fontSize: "20px" }}>
+              state council.
+            </span>
           </span>
-        </p>,
-        <p style={{ color: "#ffdfc9", fontSize: "14px" }} className="textFont">
-          Local Branch Managing Committees send their representatives in
-          proportion to the number of their members to the{" "}
-          <span style={{ color: "#FF812D", fontSize: "20px" }}>
+        </pre>,
+        <pre style={{ fontSize: "18px" }} className="History__lightColor">
+          Local Branch Managing Committees send their{"\n"} representatives in
+          proportion to the number of{"\n"} their members to the{" "}
+          <span style={{ color: "#FF812D", fontSize: "22px" }}>
             State Council.
-          </span>{" "}
-          The State Council meets twice a year, elect its Office Bearers and
-          carries out its duties for the entire State. The details regarding the
-          working of the Local/District Branch and State Branches can be seen in
-          the booklet of{" "}
-          <span style={{ color: "#FF812D", fontSize: "20px" }}>
+          </span>
+          The{"\n"} State Council meets <b>twice</b> a year, elect its Office
+          {"\n"}
+          Bearers and carries out its duties for the entire{"\n"}State. The
+          details regarding the working of the{"\n"} Local/District Branch and
+          State Branches can be{"\n"}seen in the booklet of{" "}
+          <span style={{ color: "#F9A162", fontSize: "22px" }}>
             By-Laws of NIMA
           </span>
-        </p>,
-        <p style={{ color: "#ffdfc9", fontSize: "14px" }}>
-          <span style={{ color: "#FF812D", fontSize: "18px" }}>
+        </pre>,
+        <pre style={{ fontSize: "16px" }} className="History__lightColor">
+          <span style={{ color: "#FF812D", fontSize: "32px" }}>
             The Central Council
           </span>{" "}
-          is formed by the representatives coming from all the State Councils
-          <span style={{ color: "#FF812D", fontSize: "18px" }}>
+          is{"\n"}formed by the representatives coming from{"\n"} all the State
+          Councils
+          <span style={{ color: "#F9A162", fontSize: "20px" }}>
             {" "}
             every year.
-          </span>{" "}
-          In proportion to their membership strength. The
-          <span style={{ color: "#FF812D", fontSize: "18px" }}>
+          </span>
+          In{"\n"} proportion to their membership strength. The{"\n"}
+          <span style={{ color: "#F9A162", fontSize: "22px" }}>
             {" "}
-            STATE SECRETARY
-          </span>{" "}
-          is necessarily the first representative of the
-          <span style={{ color: "#FF812D", fontSize: "18px" }}>
+            STATE SECRETARY{" "}
+          </span>
+          <span style={{ fontSize: "20px" }}>
+            is necessarily {"\n"} the first representative of the{"\n"}
+          </span>
+          <span style={{ color: "#FF812D", fontSize: "20px" }}>
             {" "}
             State Branch
           </span>{" "}
-          on the
-          <span style={{ color: "#FF812D", fontSize: "18px" }}>
-            {" "}
-            Central Council.
-          </span>{" "}
-        </p>,
-        <p style={{ color: "#FFEADC", fontSize: "14px" }}>
-          The Central Council is the important body in which are vested the
-          general control, management and direction of policy of the
-          Association. The central council in its annual meeting elects the
-          <span style={{ color: "#F79D60", fontSize: "19px" }}>
-            {" "}
-            Central Office bearers
-          </span>{" "}
-          who form the
-          <span style={{ color: "#F79D60", fontSize: "18px" }}>
-            {" "}
-            Executive Committee
-          </span>{" "}
-          of NIMA which executes the programme laid down by the Central Council.
-        </p>,
-        <p style={{ color: "#ffdfc9", fontSize: "40px" }}>Membership</p>,
-        <p style={{ fontSize: "13px", color: "#ffdfc9" }}>
-          To bring financial stability and to have labour of workers on
-          enrolments of annual members, the Association has laid stress on
-          enrolling maximim
-          <span style={{ color: "#FF812D", fontSize: "20px" }}>
-            {" "}
-            life members.
-          </span>{" "}
-          The life membership subscription is kept in
+          on the{" "}
           <span style={{ color: "#F9A162", fontSize: "20px" }}>
+            Central {"\n"} Council.
+          </span>
+        </pre>,
+        <pre
+          style={{ color: "#FFEADC", fontSize: "18px" }}
+          className="History__lightColor"
+        >
+          The Central Council is the important body in{"\n"}which are vested the
+          general control,{"\n"}management and direction of policy of the{"\n"}
+          Association. The central council in its annual{"\n"}meeting{" "}
+          <span style={{ fontSize: "22px", color: "#F79D60" }}>elects</span> the
+          <span style={{ color: "#F79D60", fontSize: "22px" }}>
             {" "}
-            long term fixed deposit in a Nationalised Bank
+            Central Office{"\n"}bearers{" "}
+          </span>
+          who form the
+          <span style={{ color: "#F79D60", fontSize: "22px" }}>
+            {" "}
+            Executive{"\n"}Committee
+          </span>{" "}
+          of NIMA which executes the{"\n"} programme laid down by the Central
+          Council.
+        </pre>,
+        <pre className="History__lightColor" style={{ fontSize: "75px" }}>
+          <span style={{ color: "#FF812D" }}>Member</span>
+          ship
+        </pre>,
+        <pre style={{ fontSize: "16px" }} className="History__lightColor">
+          To bring financial stability and to have labour of{"\n"} workers on
+          enrolments of annual members, the{"\n"} Association has laid stress on
+          enrolling maximim
+          <span style={{ color: "#FF812D", fontSize: "24px" }}>
+            {" "}
+            life{"\n"}members.
+          </span>{" "}
+          The life membership subscription is{"\n"} kept in
+          <span style={{ color: "#F9A162", fontSize: "24px" }}>
+            {" "}
+            long term fixed deposit in a{"\n"} Nationalised Bank
           </span>{" "}
           and
-          <span style={{ color: "#F9A162", fontSize: "20px" }}>
+          <span style={{ color: "#F9A162", fontSize: "24px" }}>
             {" "}
-            the annual interest{" "}
+            the annual{"\n"} interest{" "}
           </span>
           accrued on it is distributed.
-        </p>,
-        <p style={{ fontSize: "14px" }}>
-          The
-          <span style={{ color: "#F9A162", fontSize: "22px" }}>
-            {" "}
-            Association has opened Associate Membership for non integrated{" "}
+        </pre>,
+        <pre className="History__lightColor" style={{ fontSize: "18px" }}>
+          The Association has opened{" "}
+          <span style={{ color: "#F9A162", fontSize: "26px" }}>
+            Associate{"\n"}Membership for non integrated
+            {"\n"}
           </span>
-          qualified practitioners who believe in integration. The Association
-          year for Branches is from
-          <br />
-          <span style={{ color: "#FF812D", fontSize: "22px" }}>
+          qualified practitioners who believe in integration.{"\n"}The
+          Association year for Branches is from
+          <span style={{ color: "#FF812D", fontSize: "30px" }}>
             {" "}
-            <span style={{ fontSize: "37px" }}>1</span> October{" "}
-            <span style={{ fontSize: "14px" }}>to</span>{" "}
-            <span style={{ fontSize: "37px" }}>30</span> September
+            <span style={{ fontSize: "55px" }}>1</span>
+            <span style={{ fontSize: "22px", color: "#F9A162" }}>
+              {"\n"}October{" "}
+            </span>
+            <span style={{ fontSize: "18px", color: "#FFFFFF" }}>to</span>{" "}
+            <span style={{ fontSize: "55px" }}>30</span>
+            <span style={{ fontSize: "22px", color: "#F9A162" }}>
+              {" "}
+              September
+            </span>
           </span>
-        </p>,
+        </pre>,
       ],
       currentText: 0,
       wheelCount: 0,
@@ -409,7 +457,7 @@ class History extends React.Component {
   shoot = (event) => {
     event.preventDefault();
     if (this.state.currentText > 0) {
-      const para = document.getElementById("paragraphContent");
+      const para = document.getElementById("paragraphContentMobile");
       const line = document.getElementById("lineDivider");
       para.classList.remove("animatebottom");
       para.classList.add("animationFade");
@@ -427,7 +475,7 @@ class History extends React.Component {
     event.preventDefault();
 
     if (this.state.currentText < this.state.text.length - 1) {
-      const para = document.getElementById("paragraphContent");
+      const para = document.getElementById("paragraphContentMobile");
       const line = document.getElementById("lineDivider");
       para.classList.remove("animatebottom");
       para.classList.add("animation");
@@ -445,22 +493,34 @@ class History extends React.Component {
       <div className="container">
         <div className="row History__row">
           <div className="text">
-            <p id="paragraphContent">
+            <p id="paragraphContent" className="History__Data">
               {
                 this.state.text[this.state.currentText]
                 // this.state.text[20]
               }
             </p>
+            <div className="History__MobileData">
+              <p id="paragraphContentMobile">
+                {
+                  this.state.mobileText[this.state.currentText]
+                  // this.state.mobileText[7]
+                }
+              </p>
+            </div>
+            <div>
+              <hr id="lineDivider" />
+              <a className="History__link History__registerLink" href="#">
+                Register Yourself{" "}
+                <img
+                  src={Register}
+                  alt=""
+                  className="History__linkImg img-fluid"
+                />
+              </a>
+            </div>
           </div>
+        </div>
 
-          <hr id="lineDivider" />
-        </div>
-        <div className="row History__registerLink">
-          <a className="History__link" href="#">
-            Register Yourself{" "}
-            <img src={Register} alt="" className="History__linkImg img-fluid" />
-          </a>
-        </div>
         <div className="MobileView">
           {/* <button onClick={this.shoot}> </button>
           <button onClick={this.shootdown}></button> */}
