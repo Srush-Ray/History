@@ -9,6 +9,13 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import Register from "./Register.svg";
 import mobileData from "./Data.js";
 
+// To detect browser, "npm i detect-browser" is added
+const { detect } = require("detect-browser");
+const browser = detect();
+if (browser) {
+  console.log(browser.name);
+}
+
 class History extends React.Component {
   constructor() {
     super();
@@ -402,14 +409,101 @@ class History extends React.Component {
       currentText: 0,
       wheelCount: 0,
       scrollTop: 0,
+      scrollDir: -1, //-1 while scrolling down, +1 while scrolling up
+      ticking: false, //for testing, but don't remove this
+      lastScrollY: 0,
     };
   }
+
   componentDidMount() {
-    window.addEventListener("wheel", this.scrollText);
+    if (browser.name === "safari")
+      window.addEventListener("wheel", this.scrollTextSafari);
+    else if (browser.name !== "safari")
+      window.addEventListener("wheel", this.scrollText);
   }
   componentWillMount() {
-    window.addEventListener("wheel", this.scrollText);
+    if (browser.name === "safari")
+      window.addEventListener("wheel", this.scrollTextSafari);
+    else if (browser.name !== "safari")
+      window.addEventListener("wheel", this.scrollText);
   }
+  updateScrollDir = () => {
+    const threshold = 1;
+    let scrollY = window.pageYOffset;
+    if (Math.abs(scrollY - this.state.lastScrollY) <= 1) {
+      console.log("math", Math.abs(scrollY - this.state.lastScrollY));
+      this.setState({ ticking: false });
+      return;
+    }
+    if (scrollY > this.state.lastScrollY) {
+      this.setState({ scrollDir: -1 }); // if scrolling down
+    } else if (scrollY < this.state.lastScrollY) {
+      this.setState({ scrollDir: 1 }); //if scrolling up
+    }
+
+    this.setState({ lastScrollY: scrollY > 0 ? scrollY : 0 });
+    this.setState({ ticking: false });
+  };
+
+  // componentDidMount() {
+  //   window.addEventListener("wheel", this.scrollText);
+  // }
+  // componentWillMount() {
+  //   window.addEventListener("wheel", this.scrollText);
+  // }
+
+  scrollTextSafari = (event) => {
+    console.log("direction", this.state.scrollDir);
+    console.log("offset", window.pageYOffset);
+    if (this.state.ticking === false) {
+      window.requestAnimationFrame(this.updateScrollDir);
+      this.setState({ ticking: true });
+    }
+
+    if (
+      this.state.scrollDir < 0 &&
+      this.state.currentText < this.state.text.length - 1
+    ) {
+      if (this.state.wheelCount === 3) {
+        this.setState({ wheelCount: 0 });
+        const para = document.getElementById("paragraphContent");
+        const line = document.getElementById("lineDivider");
+        para.classList.remove("animatebottom");
+        para.classList.remove("animationTop");
+        para.classList.add("animation");
+        setTimeout(() => {
+          para.classList.remove("animation");
+          this.setState({ currentText: this.state.currentText + 1 });
+          line.classList.add("lineAnimation");
+          para.classList.add("animatebottom");
+        }, 1000);
+        line.classList.remove("lineAnimation");
+      } else {
+        this.setState({ wheelCount: this.state.wheelCount + 1 });
+      }
+    } else if (this.state.scrollDir > 0 && this.state.currentText > 0) {
+      if (this.state.wheelCount === 3) {
+        this.setState({ wheelCount: 0 });
+        const para = document.getElementById("paragraphContent");
+        const line = document.getElementById("lineDivider");
+        para.classList.remove("animatebottom");
+        para.classList.add("animationFade");
+        setTimeout(() => {
+          this.setState({ currentText: this.state.currentText - 1 });
+          para.classList.remove("animationFade");
+          para.classList.add("animationTop");
+          line.classList.add("lineAnimation");
+        }, 1000);
+        para.classList.remove("animationTop");
+        line.classList.remove("lineAnimation");
+      } else {
+        this.setState({ wheelCount: this.state.wheelCount + 1 });
+      }
+    } else {
+      this.setState({ currentText: this.state.currentText });
+    }
+  };
+
   scrollText = (event) => {
     if (
       event.deltaY < 0 &&
@@ -491,36 +585,87 @@ class History extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="row History__row">
-          <div className="text">
-            <p id="paragraphContent" className="History__Data">
-              {
-                this.state.text[this.state.currentText]
-                // this.state.text[20]
-              }
-            </p>
-            <div className="History__MobileData">
-              <p id="paragraphContentMobile">
+        {browser.name === "safari" && (
+          <div className="row Objective__row">
+            <div className="text">
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <p
+                id="paragraphContent"
+                style={{ marginBottom: "0" }}
+                className="Objective__Data"
+              >
                 {
-                  this.state.mobileText[this.state.currentText]
-                  // this.state.mobileText[7]
+                  this.state.text[this.state.currentText]
+                  // this.state.text[20]
                 }
               </p>
-            </div>
-            <div>
-              <hr id="lineDivider" />
-              <a className="History__link History__registerLink" href="#">
-                Register Yourself{" "}
-                <img
-                  src={Register}
-                  alt=""
-                  className="History__linkImg img-fluid"
-                />
-              </a>
+
+              <div className="Objective__MobileData">
+                <p id="paragraphContentMobile">
+                  {
+                    this.state.mobileText[this.state.currentText]
+                    // this.state.mobileText[20]
+                  }
+                </p>
+              </div>
+              <div>
+                <hr id="lineDivider" />
+                <a className="Objective__link Objective__registerLink" href="#">
+                  Register Yourself{" "}
+                  <img
+                    src={Register}
+                    alt=""
+                    className="Objective__linkImg img-fluid"
+                  />
+                </a>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br /> <br />
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
             </div>
           </div>
-        </div>
-
+        )}
+        {browser.name !== "safari" && (
+          <div className="row History__row">
+            <div className="text">
+              <p id="paragraphContent" className="History__Data">
+                {
+                  this.state.text[this.state.currentText]
+                  // this.state.text[20]
+                }
+              </p>
+              <div className="History__MobileData">
+                <p id="paragraphContentMobile">
+                  {
+                    this.state.mobileText[this.state.currentText]
+                    // this.state.mobileText[7]
+                  }
+                </p>
+              </div>
+              <div>
+                <hr id="lineDivider" />
+                <a className="History__link History__registerLink" href="#">
+                  Register Yourself{" "}
+                  <img
+                    src={Register}
+                    alt=""
+                    className="History__linkImg img-fluid"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
         <div className="MobileView">
           {/* <button onClick={this.shoot}> </button>
           <button onClick={this.shootdown}></button> */}
