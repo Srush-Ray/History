@@ -461,10 +461,10 @@ class History extends React.Component {
     }
 
     if (
-      this.state.scrollDir < 0 &&
+      this.state.scrollDir > 0 &&
       this.state.currentText < this.state.text.length - 1
     ) {
-      if (this.state.wheelCount === 3) {
+      if (this.state.wheelCount === 10) {
         this.setState({ wheelCount: 0 });
         const para = document.getElementById("paragraphContent");
         const line = document.getElementById("lineDivider");
@@ -481,8 +481,8 @@ class History extends React.Component {
       } else {
         this.setState({ wheelCount: this.state.wheelCount + 1 });
       }
-    } else if (this.state.scrollDir > 0 && this.state.currentText > 0) {
-      if (this.state.wheelCount === 3) {
+    } else if (this.state.scrollDir < 0 && this.state.currentText > 0) {
+      if (this.state.wheelCount === 10) {
         this.setState({ wheelCount: 0 });
         const para = document.getElementById("paragraphContent");
         const line = document.getElementById("lineDivider");
@@ -509,7 +509,7 @@ class History extends React.Component {
       event.deltaY < 0 &&
       this.state.currentText < this.state.text.length - 1
     ) {
-      if (this.state.wheelCount === 50) {
+      if (this.state.wheelCount === 10) {
         this.setState({ wheelCount: 0 });
         const para = document.getElementById("paragraphContent");
         const line = document.getElementById("lineDivider");
@@ -526,7 +526,7 @@ class History extends React.Component {
         this.setState({ wheelCount: this.state.wheelCount + 1 });
       }
     } else if (event.deltaY > 0 && this.state.currentText > 0) {
-      if (this.state.wheelCount === 50) {
+      if (this.state.wheelCount === 10) {
         this.setState({ wheelCount: 0 });
         const para = document.getElementById("paragraphContent");
         const line = document.getElementById("lineDivider");
@@ -626,7 +626,6 @@ class History extends React.Component {
                 <br />
                 <br />
                 <br />
-                <br /> <br />
                 <br />
                 <br />
                 <br />
@@ -669,10 +668,15 @@ class History extends React.Component {
         <div className="MobileView">
           {/* <button onClick={this.shoot}> </button>
           <button onClick={this.shootdown}></button> */}
-          <Fab size="small" color="black" onClick={this.shoot} aria-label="up">
+          <Fab
+            size="small"
+            color="black"
+            onClick={this.shootdown}
+            aria-label="up"
+          >
             <MdKeyboardArrowUp />
           </Fab>
-          <Fab size="small" onClick={this.shootdown} aria-label="down">
+          <Fab size="small" onClick={this.shoot} aria-label="down">
             <MdKeyboardArrowDown />
           </Fab>
         </div>
