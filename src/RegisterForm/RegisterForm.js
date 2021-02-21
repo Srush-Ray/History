@@ -24,10 +24,10 @@ export default class RegisterForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const data = new FormData();
-    data["firstName"] = this.state.firstName;
-    data["middleName"] = this.state.middleName;
-    data["contactNo"] = this.state.contactNo;
-    data["alternateNo"] = this.state.alternateNo;
+    data["fname"] = this.state.firstName;
+    data["lname"] = this.state.middleName;
+    data["num1"] = this.state.contactNo;
+    data["num2"] = this.state.alternateNo;
     data["email"] = this.state.email;
     data["city"] = this.state.city;
     data["state"] = this.state.state;
