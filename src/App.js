@@ -25,7 +25,7 @@ function App() {
           <Route path="/" component={History} exact />
 
           <Route path="/History/" component={History} exact />
-          <Route path="/register" component={RegisterForm} exact />
+          <Route path="/register" component={RegisterForm} />
         </Switch>
       </BrowserRouter>
     </div>
