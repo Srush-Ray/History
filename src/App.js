@@ -3,14 +3,31 @@ import React from "react";
 // import './App.css';
 //import Objective from "./Objectives/Objective";
 import History from "./History/History.js";
-
+import {
+  Switch,
+  Route,
+  withRouter,
+  Link,
+  NavLink,
+  BrowserRouter,
+  Router,
+} from "react-router-dom";
+import RegisterForm from "./RegisterForm/RegisterForm.js";
 function App() {
   return (
     <div className="App">
       {/*
       <Objective />
+       <History />
     */}
-      <History />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" component={History} exact />
+
+          <Route path="/History/" component={History} exact />
+          <Route path="/register" component={RegisterForm} exact />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

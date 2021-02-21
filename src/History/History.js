@@ -514,6 +514,7 @@ class History extends React.Component {
         const para = document.getElementById("paragraphContent");
         const line = document.getElementById("lineDivider");
         para.classList.remove("animatebottom");
+        para.classList.remove("animateTop");
         para.classList.add("animation");
         setTimeout(() => {
           para.classList.remove("animation");
@@ -531,6 +532,7 @@ class History extends React.Component {
         const para = document.getElementById("paragraphContent");
         const line = document.getElementById("lineDivider");
         para.classList.remove("animatebottom");
+        para.classList.remove("animateTop");
         para.classList.add("animationFade");
         setTimeout(() => {
           this.setState({ currentText: this.state.currentText - 1 });
@@ -614,7 +616,10 @@ class History extends React.Component {
               </div>
               <div>
                 <hr id="lineDivider" />
-                <a className="Objective__link Objective__registerLink" href="#">
+                <a
+                  className="Objective__link Objective__registerLink"
+                  href="/register"
+                >
                   Register Yourself{" "}
                   <img
                     src={Register}
@@ -653,7 +658,10 @@ class History extends React.Component {
               </div>
               <div>
                 <hr id="lineDivider" />
-                <a className="History__link History__registerLink" href="#">
+                <a
+                  className="History__link History__registerLink"
+                  href="/register"
+                >
                   Register Yourself{" "}
                   <img
                     src={Register}
