@@ -8,6 +8,7 @@ import { MdKeyboardArrowUp } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import Register from "./Register.svg";
 import mobileData from "./Data.js";
+import { Link } from "react-router-dom";
 
 // To detect browser, "npm i detect-browser" is added
 const { detect } = require("detect-browser");
@@ -616,17 +617,17 @@ class History extends React.Component {
               </div>
               <div>
                 <hr id="lineDivider" />
-                <a
-                  className="Objective__link Objective__registerLink"
-                  href="/register"
+                <Link
+                  to="/register"
+                  className="History__link History__registerLink"
                 >
                   Register Yourself{" "}
                   <img
                     src={Register}
                     alt=""
-                    className="Objective__linkImg img-fluid"
+                    className="History__linkImg img-fluid"
                   />
-                </a>
+                </Link>
                 <br />
                 <br />
                 <br />
@@ -658,9 +659,9 @@ class History extends React.Component {
               </div>
               <div>
                 <hr id="lineDivider" />
-                <a
+                <Link
+                  to="/register"
                   className="History__link History__registerLink"
-                  href="/register"
                 >
                   Register Yourself{" "}
                   <img
@@ -668,7 +669,7 @@ class History extends React.Component {
                     alt=""
                     className="History__linkImg img-fluid"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
