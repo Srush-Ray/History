@@ -29,6 +29,17 @@ pre {
   text-align: right;
   bottom: 0;
 }
+.footer_upcloud {
+  display: flex;
+  justify-content: flex-start;
+  color: lightgray;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 20px;
+  margin-left: -25vw;
+  position: fixed;
+  bottom: -2vh;
+}
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
@@ -190,6 +201,17 @@ pre {
 /* MOBILE SPECIFIC */
 
 @media only screen and (max-width: 480px) {
+  .footer_upcloud {
+    display: flex;
+    justify-content: flex-start;
+    color: lightgray;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 20px;
+    margin-left: -10vw;
+    position: fixed;
+    bottom: -2vh;
+  }
   .History__Data {
     display: none;
   }

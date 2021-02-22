@@ -587,107 +587,112 @@ class History extends React.Component {
   };
   render() {
     return (
-      <div className="container">
-        {browser.name === "safari" && (
-          <div className="row Objective__row">
-            <div className="text">
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              <p
-                id="paragraphContent"
-                style={{ marginBottom: "0" }}
-                className="Objective__Data"
-              >
-                {
-                  this.state.text[this.state.currentText]
-                  // this.state.text[20]
-                }
-              </p>
+      <div>
+        <div className="container">
+          {browser.name === "safari" && (
+            <div className="row Objective__row">
+              <div className="text">
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <p
+                  id="paragraphContent"
+                  style={{ marginBottom: "0" }}
+                  className="Objective__Data"
+                >
+                  {
+                    this.state.text[this.state.currentText]
+                    // this.state.text[20]
+                  }
+                </p>
 
-              <div className="Objective__MobileData">
-                <p id="paragraphContentMobile">
-                  {
-                    this.state.mobileText[this.state.currentText]
-                    // this.state.mobileText[20]
-                  }
-                </p>
-              </div>
-              <div>
-                <hr id="lineDivider" />
-                <Link
-                  to="/register"
-                  className="History__link History__registerLink"
-                >
-                  Register Yourself{" "}
-                  <img
-                    src={Register}
-                    alt=""
-                    className="History__linkImg img-fluid"
-                  />
-                </Link>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-              </div>
-            </div>
-          </div>
-        )}
-        {browser.name !== "safari" && (
-          <div className="row History__row">
-            <div className="text">
-              <p id="paragraphContent" className="History__Data">
-                {
-                  this.state.text[this.state.currentText]
-                  // this.state.text[20]
-                }
-              </p>
-              <div className="History__MobileData">
-                <p id="paragraphContentMobile">
-                  {
-                    this.state.mobileText[this.state.currentText]
-                    // this.state.mobileText[7]
-                  }
-                </p>
-              </div>
-              <div>
-                <hr id="lineDivider" />
-                <Link
-                  to="/register"
-                  className="History__link History__registerLink"
-                >
-                  Register Yourself{" "}
-                  <img
-                    src={Register}
-                    alt=""
-                    className="History__linkImg img-fluid"
-                  />
-                </Link>
+                <div className="Objective__MobileData">
+                  <p id="paragraphContentMobile">
+                    {
+                      this.state.mobileText[this.state.currentText]
+                      // this.state.mobileText[20]
+                    }
+                  </p>
+                </div>
+                <div>
+                  <hr id="lineDivider" />
+                  <Link
+                    to="/register"
+                    className="History__link History__registerLink"
+                  >
+                    Register Yourself{" "}
+                    <img
+                      src={Register}
+                      alt=""
+                      className="History__linkImg img-fluid"
+                    />
+                  </Link>
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                  <br />
+                </div>
               </div>
             </div>
-          </div>
-        )}
-        <div className="MobileView">
-          {/* <button onClick={this.shoot}> </button>
+          )}
+          {browser.name !== "safari" && (
+            <div className="row History__row">
+              <div className="text">
+                <p id="paragraphContent" className="History__Data">
+                  {
+                    this.state.text[this.state.currentText]
+                    // this.state.text[20]
+                  }
+                </p>
+                <div className="History__MobileData">
+                  <p id="paragraphContentMobile">
+                    {
+                      this.state.mobileText[this.state.currentText]
+                      // this.state.mobileText[7]
+                    }
+                  </p>
+                </div>
+                <div>
+                  <hr id="lineDivider" />
+                  <Link
+                    to="/register"
+                    className="History__link History__registerLink"
+                  >
+                    Register Yourself{" "}
+                    <img
+                      src={Register}
+                      alt=""
+                      className="History__linkImg img-fluid"
+                    />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          )}
+          <div className="MobileView">
+            {/* <button onClick={this.shoot}> </button>
           <button onClick={this.shootdown}></button> */}
-          <Fab
-            size="small"
-            color="black"
-            onClick={this.shootdown}
-            aria-label="up"
-          >
-            <MdKeyboardArrowUp />
-          </Fab>
-          <Fab size="small" onClick={this.shoot} aria-label="down">
-            <MdKeyboardArrowDown />
-          </Fab>
+            <Fab
+              size="small"
+              color="black"
+              onClick={this.shootdown}
+              aria-label="up"
+            >
+              <MdKeyboardArrowUp />
+            </Fab>
+            <Fab size="small" onClick={this.shoot} aria-label="down">
+              <MdKeyboardArrowDown />
+            </Fab>
+          </div>
+        </div>
+        <div className="footer_upcloud">
+          Powered by Upcloud Technology Pvt. Ltd.
         </div>
       </div>
     );
